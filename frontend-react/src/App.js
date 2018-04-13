@@ -22,6 +22,8 @@ class App extends Component {
         contact.id !== contactToRemove.id
       )
     }))
+
+    ContactsAPI.remove(contactToRemove);
   }
 
   render() {
