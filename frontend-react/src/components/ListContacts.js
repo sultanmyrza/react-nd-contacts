@@ -12,7 +12,7 @@ class ListContacts extends React.Component {
     }
 
     updateQuery = (query) => {
-        this.setState({ query: kquery.trim() })
+        this.setState({ query: query.trim() })
     }
      
     render() {
@@ -20,7 +20,7 @@ class ListContacts extends React.Component {
             <div className="list-contacts">
                 <div className="list-contacts-top">
                     <input
-                        className="serach-contacts"
+                        className="search-contacts"
                         type="text"
                         placeholder="Search contacts"
                         value={this.state.query}
@@ -36,7 +36,7 @@ class ListContacts extends React.Component {
                                 <p>{contact.email}</p>
                             </div>
                             <button 
-                                onClick={() => props.onDeleteContact(contact)}
+                                onClick={() => this.props.onDeleteContact(contact)}
                                 className="contact-remove">
                                 Remove
                             </button>
