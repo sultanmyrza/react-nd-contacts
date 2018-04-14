@@ -7,9 +7,8 @@ class CreateContact extends React.Component {
     handleSubmit = (event) => {
         // prevent submit to manually serialize submitted data
         event.preventDefault();
-        console.log('event prevented');
         const formValues = serializeForm(event.target, {hash: true});
-        console.log(formValues);
+        this.props.onCreateContact(formValues);        
     }
     render() {
         return (
